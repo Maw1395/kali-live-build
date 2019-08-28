@@ -55,7 +55,11 @@ mkdir kali-config/common/packages.chroot
 mv nessus-*amd64.deb kali-config/common/packages.chroot/
 ```
 
-=== 0x03 Check /etc/apt/sources.list
+=== 0x03 Make a copy of your packages file
+cp -r kali-confing/common/packages.chroot /root/
+mv /root/packages.chroot /root/pakacges
+
+=== 0x04 Check /etc/apt/sources.list
 ```
 change http to https
 ```
@@ -82,6 +86,35 @@ Did you google the error instead of reading this part :( that may have been a po
 1. make sure that your packages are spelt correctly, (did you put kali-meny instead of menu)
 2. Are the packages upercase
   * Here edit these two files
+  * chroot/root/packages/Packages
+  * chroot/root/packages.chroot
+  * everyplace where you see the uppercase package name that failed, change it to lowercase
+3. run lb chroot_install-packages install
+4. order of lb commands if needed
+```
+Main porcelain commands
+lb config(1)
+  creates configuration for live-build
+lb bootstrap(1)
+  executes the first build stage, creating (bootstraping) a basic Debian root filesystem
+lb chroot(1)
+  executes the second build stage, building the live OS filesystem
+lb installer(1)
+  executes the third build stage, obtaining installer components (optional)
+lb binary(1)
+  executes the fourth build stage, generating a binary image
+lb source(1)
+  executes the fifth build stage, generating a source image (optional)
+lb clean(1)
+  cleans up system build directories
+
+
+Ancillary Commands
+lb(1)
+  generic live-build script execution wrapper
+lb build(1)
+  alias for all build stages
+```
   
 == 0x07 Writing to Disk
 install k3b
