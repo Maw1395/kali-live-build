@@ -24,10 +24,11 @@ https://docs.kali.org/development/live-build-a-custom-kali-iso[Read this first]
 
 Ideally, you should build your custom Kali ISO from *within a pre-existing Kali environment.* Using a https://www.kali.org/downloads/[lightweight] or virtualised (https://www.offensive-security.com/kali-linux-vm-vmware-virtualbox-hyperv-image-download/[VMware/VirtualBox]) image is recommended.
 
-As `root`:
+EVERYTHING IS DONE As `root`:
 
 ----
 apt-get install curl git live-build cdebootstrap
+https://gitlab.com/kalilinux/build-scripts/live-build-config
 ----
 
 
