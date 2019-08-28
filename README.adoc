@@ -60,22 +60,26 @@ cp -r kali-confing/common/packages.chroot /root/
 mv /root/packages.chroot /root/pakacges
 
 === 0x04 Check /etc/apt/sources.list
+here's what mine looks like
 ```
-change http to https
+deb https://http.kali.org/kali kali-rolling main non-free contrib
+deb-src https://http.kali.org/kali kali-rolling main non-free contrib
+deb  https://deb.debian.org/debian  stretch main
+deb-src  https://deb.debian.org/debian  stretch main
 ```
 
-=== 0x04 Optional change wallpaper
+=== 0x05 Optional change wallpaper
 ```
 mkdir -p kali-config/common/includes.chroot/usr/share/wallpapers/kali/contents/images
 wget https://www.kali.org/dojo/bh2015/wp-blue.png
 mv wp-blue.png kali-config/common/includes.chroot/usr/share/wallpapers/kali/contents/images
 ```
 
-=== 0x05 Build
+=== 0x06 Build
 ```
 ./build.sh -v
 ```
-=== 0x06 It Bricked :(
+=== 0x07 It Bricked :(
 
 well of course it did silly goose, nothing works right the first time  
 
@@ -116,7 +120,7 @@ lb build(1)
   alias for all build stages
 ```
   
-== 0x07 Writing to Disk
+== 0x08 Writing to Disk
 install k3b
 
 insert blank disk
