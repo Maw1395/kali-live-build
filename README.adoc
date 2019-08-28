@@ -45,7 +45,6 @@ kali-archive-keyring
 debian-installer-launcher
 alsa-tools
 locales-all
-dconf-tools
 openssh-server
 EOF 
 ```
@@ -93,10 +92,10 @@ Did you google the error instead of reading this part :( that may have been a po
   * chroot/root/packages/Packages
   * chroot/root/packages.chroot
   * everyplace where you see the uppercase package name that failed, change it to lowercase
-3. run lb chroot_install-packages install
-4. run lb installer
-5. run lb binary
-6. run lb source
+3. run sudo lb chroot_install-packages install
+4. run sudo lb installer
+5. run sudo lb binary
+6. run sudo lb source
 4. order of lb commands if needed
 ```
 Main porcelain commands
