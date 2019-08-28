@@ -57,7 +57,7 @@ mv nessus-*amd64.deb kali-config/common/packages.chroot/
 
 === 0x03 Check /etc/apt/sources.list
 ```
-change 
+change http to https
 ```
 
 === 0x04 Optional change wallpaper
