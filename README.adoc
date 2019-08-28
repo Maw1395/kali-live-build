@@ -71,7 +71,24 @@ mv wp-blue.png kali-config/common/includes.chroot/usr/share/wallpapers/kali/cont
 ```
 ./build.sh -v
 ```
-=== 0x06 Writing to Disk
+=== 0x06 It Bricked :(
+
+well of course it did silly goose, nothing works right the first time  
+
+Did you google the error instead of reading this part :( that may have been a poor choice 
+
+==== Unable to locake package ...
+
+1. make sure that your packages are spelt correctly, (did you put kali-meny instead of menu)
+2. Are the packages upercase
+  * Here edit these two files
+  
+== 0x07 Writing to Disk
+install k3b
+
+insert blank disk
+
+project > add files > images/*.iso > write to disk
 == References
 
 * https://docs.kali.org/kali-dojo/02-mastering-live-build
