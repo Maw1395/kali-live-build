@@ -34,7 +34,7 @@ https://gitlab.com/kalilinux/build-scripts/live-build-config
 
 
 
-== Customisations
+== Customizations
 === 0x01 – Overwrite the default Kali package list
 ``` 
 cat > kali-config/variant-default/package-lists/kali.list.chroot << EOF
@@ -47,6 +47,7 @@ debian-installer-launcher
 alsa-tools
 locales-all
 openssh-server
+openvas
 EOF 
 ```
 === 0x02 Adding Packages By Deb File MAKE SURE ALL FILE NAMES ARE LOWER CASE
@@ -93,10 +94,8 @@ Did you google the error instead of reading this part :( that may have been a po
   * chroot/root/packages/Packages
   * chroot/root/packages.chroot
   * everyplace where you see the uppercase package name that failed, change it to lowercase
-3. run sudo lb chroot_install-packages install
-```
-lb chroot_package-lists live & lb chroot_install-packages live & lb chroot_includes  & lb chroot_hooks  & lb chroot_hacks  & lb chroot_interactive  & lb chroot_archives chroot remove & lb chroot_apt remove & lb chroot_hostname remove & lb chroot_resolv remove & lb chroot_hosts remove & lb chroot_sysv-rc remove & lb chroot_tmpfs remove & lb chroot_dpkg remove & lb chroot_debianchroot remove & lb chroot_sysfs remove & lb chroot_selinuxfs remove & lb chroot_proc remove & lb chroot_devpts remove & lb chroot_cache save & lb chroot_devpts install & lb chroot_proc install & lb chroot_selinuxfs install & lb chroot_sysfs install & lb chroot_debianchroot install & lb chroot_dpkg install & lb chroot_tmpfs install & lb chroot_sysv-rc install & lb chroot_hosts install & lb chroot_resolv install & lb chroot_hostname install & lb chroot_apt install & lb chroot_archives chroot install
-```
+3. run sudo lb chroot_install-packages install && lb chroot_package-lists live && lb chroot_install-packages live && lb chroot_includes  && lb chroot_hooks  && lb chroot_hacks  && lb chroot_interactive  && lb chroot_archives chroot remove && lb chroot_apt remove && lb chroot_hostname remove && lb chroot_resolv remove && lb chroot_hosts remove && lb chroot_sysv-rc remove && lb chroot_tmpfs remove && lb chroot_dpkg remove && lb chroot_debianchroot remove && lb chroot_sysfs remove && lb chroot_selinuxfs remove && lb chroot_proc remove && lb chroot_devpts remove && lb chroot_cache save && lb chroot_devpts install && lb chroot_proc install && lb chroot_selinuxfs install && lb chroot_sysfs install && lb chroot_debianchroot install && lb chroot_dpkg install && lb chroot_tmpfs install && lb chroot_sysv-rc install && lb chroot_hosts install && lb chroot_resolv install && lb chroot_hostname install && lb chroot_apt install && lb chroot_archives chroot install
+
 4. run sudo lb installer
 5. run sudo lb binary
 6. run sudo lb source
