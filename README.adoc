@@ -53,10 +53,20 @@ EOF
 === 0x02 Adding Packages By Deb File MAKE SURE ALL FILE NAMES ARE LOWER CASE
 ```
 mkdir kali-config/common/packages.chroot
-mv nessus-*amd64.deb kali-config/common/packages.chroot/
+mv Nessus-*amd64.deb kali-config/common/packages.chroot/
 ```
 == WAIT!
-did you install a deb then rename it to a lowercase value? Don't do that, don't do that, delete it, everything will break
+That Nessus package has an uppercase value, that needs to be fixed
+```
+cd kali-config/common/packages.chroot
+mkdir tmp
+dpkg-deb -R Nessus-*amd64.deb tmp
+cd tmp
+grep -rl 'Nessus' ./ | xargs sed -i 's/Nessus/nessus/g'
+cd ..
+dpkg-deb -b tmp nessus-*amd64.deb
+rm -r tmp
+```
 
 === 0x03 Make a copy of your packages file
 cp -r kali-confing/common/packages.chroot /root/
