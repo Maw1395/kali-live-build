@@ -55,6 +55,8 @@ EOF
 mkdir kali-config/common/packages.chroot
 mv nessus-*amd64.deb kali-config/common/packages.chroot/
 ```
+== WAIT!
+did you install a deb then rename it to a lowercase value? Don't do that, don't do that, delete it, everything will break
 
 === 0x03 Make a copy of your packages file
 cp -r kali-confing/common/packages.chroot /root/
